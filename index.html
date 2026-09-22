@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>...</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="noise"></div>
+<div id="flash"></div>
+
+<main class="screen">
+
+    <section id="start">
+        <div class="warning">⚠ GİRİŞ KONTROLÜ ⚠</div>
+        <h1>HAZIR MISIN?</h1>
+        <p>Devam etmek için telefon numaranı gir.</p>
+
+        <input id="phone" type="tel" placeholder="05XX XXX XX XX">
+        <button onclick="phoneStep()">DEVAM ET</button>
+    </section>
+
+    <section id="confirm" class="hidden">
+        <div class="warning">GERİ DÖNÜŞ YOK</div>
+        <h1>EMİN MİSİN?</h1>
+        <p>Bir sonraki adımı kabul edersen geri sayım başlayacak.</p>
+        <button onclick="cameraStep()">DEVAM ET</button>
+    </section>
+
+    <section id="camera" class="hidden">
+        <div class="warning">KAMERA ERİŞİMİ</div>
+        <h1>KAMERANI AÇ</h1>
+        <p>Devam etmek için kamera izni vermen gerekiyor.</p>
+
+        <video id="video" autoplay playsinline></video>
+
+        <button onclick="takePhoto()">KAMERAYI AÇ</button>
+    </section>
+
+    <section id="countdown" class="hidden">
+        <div class="warning">LİSTEYE EKLENDİN</div>
+
+        <div id="photoBox"></div>
+
+        <h1 id="message">SÜREN BAŞLADI.</h1>
+
+        <div id="timer">05:00:00</div>
+
+        <p id="scareText">Bizi bekletme...</p>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
